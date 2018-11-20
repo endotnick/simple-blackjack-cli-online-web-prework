@@ -23,7 +23,8 @@ def end_game(card_total)
   if card_total > 17 && card_total < 21
     puts "Yay! You hit #{card_total}, you won!"
   else
-  puts "Sorry, you hit #{card_total}. Thanks for playing!"
+    puts "Sorry, you hit #{card_total}. Thanks for playing!"
+  end
 end
 
 def initial_round
