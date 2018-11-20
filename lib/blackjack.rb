@@ -41,7 +41,10 @@ def hit?(total)
   elsif total >= 17
     puts 'Congrats!'
   else
-    puts 'Sorry!'    
+    puts 'Sorry!'
+  end
+  if input != 'h'
+    end_game
   end
   total
 end
