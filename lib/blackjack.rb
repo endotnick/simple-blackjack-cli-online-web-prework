@@ -38,6 +38,10 @@ def hit?(total)
   input = get_user_input
   if input == 'h'
     total += deal_card
+  elsif total >= 17
+    puts 'Congrats!'
+  else
+    puts 'Sorry!'    
   end
   total
 end
