@@ -51,7 +51,6 @@ end
 #####################################################
 
 def runner
-<<<<<<< HEAD
   welcome
   total = initial_round
   until total > 21 do
@@ -59,16 +58,4 @@ def runner
     display_card_total(total)
   end
   end_game(total)
-=======
-  # code runner here
-=begin
-    until input == 's' do
-      if input == 'h'
-        total += deal_card
-        end_game if total > 21
-      end
-      prompt_user
-      input = get_user_input
-=end
->>>>>>> 287a0b3ccc670009f5ab588c94dac34ddbb4b093
 end
