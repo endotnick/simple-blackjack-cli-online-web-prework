@@ -51,6 +51,7 @@ end
 def runner
   welcome
   total = initial_round
+  dealer = initial_round(false)
   input = get_user_input
   while input == 'h' do
     total = hit(total)
