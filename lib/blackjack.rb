@@ -62,7 +62,7 @@ def runner
 
   while dealer < 17 do
     puts "Dealer has #{dealer}"
-    dealer += hit(dealer)
+    dealer = hit(dealer)
   end
 
   while input == 'h' do
