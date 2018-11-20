@@ -54,9 +54,9 @@ def runner
   total = initial_round
   input = get_user_input
   while input == 'h' do
-    total = hit?(total, input)
-    display_card_total(total)
+    total = hit?(total, input)    
     break if total > 20
+    display_card_total(total)
     input = get_user_input
   end
   end_game(total)
