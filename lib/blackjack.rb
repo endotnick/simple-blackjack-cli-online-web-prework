@@ -15,6 +15,7 @@ def prompt_user
 end
 
 def get_user_input
+  prompt_user
   gets.chomp
 end
 
@@ -34,15 +35,8 @@ def initial_round
 end
 
 def hit?(total)
-  prompt_user
-  input = get_user_input
-  if input == 'h'
-    total += deal_card
-  elsif total >= 17
-    puts 'Congrats!'
-  else
-    puts 'Sorry!'
-  end
+  input = get_user_input  
+  total += input == 'h' ? deal_card : 0
   if input != 'h'
     end_game(total)
   end
@@ -60,7 +54,7 @@ end
 def runner
   welcome
   total = initial_round
-  until total >= 21 do
+  until total > 21 do
     total = hit?(total)
     display_card_total(total)
   end
