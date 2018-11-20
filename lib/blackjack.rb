@@ -58,9 +58,9 @@ def runner
   welcome
   total = initial_round
   dealer = initial_round(false)
-  puts "Dealer starting with #{dealer}"
+  puts "Dealer is showing #{dealer} (total)"
 
-  while dealer < 17 do  
+  while dealer < 17 do
     dealer = hit(dealer)
   end
 
