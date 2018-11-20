@@ -20,8 +20,8 @@ end
 
 
 def end_game(card_total)
-  puts "Sorry, you hit #{card_total}. Thanks for playing!"
 
+  puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
 def initial_round
@@ -60,7 +60,7 @@ end
 def runner
   welcome
   total = initial_round
-  until total > 21 do
+  until total >= 21 do
     total = hit?(total)
     display_card_total(total)
   end
