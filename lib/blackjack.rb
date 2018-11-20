@@ -56,6 +56,7 @@ def runner
   until input != 'h' do
     total = hit?(total, input)
     display_card_total(total)
+    input = get_user_input
   end
   end_game(total)
 end
