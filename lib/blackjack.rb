@@ -44,7 +44,7 @@ def hit?(total)
     puts 'Sorry!'
   end
   if input != 'h'
-    end_game
+    end_game(total)
   end
   total
 end
