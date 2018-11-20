@@ -30,10 +30,7 @@ def initial_round
     total += deal_card
   end
   display_card_total(total)
-<<<<<<< HEAD
   total
-=======
->>>>>>> 287a0b3ccc670009f5ab588c94dac34ddbb4b093
 end
 
 def hit?(total)
