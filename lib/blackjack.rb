@@ -53,7 +53,7 @@ def runner
   welcome
   total = initial_round
   input = get_user_input
-  until input != 'h' do
+  until input != 'h' || total > 21 do
     total = hit?(total, input)
     display_card_total(total)
     input = get_user_input
