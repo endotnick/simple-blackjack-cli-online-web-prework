@@ -58,13 +58,13 @@ def runner
   welcome
   total = initial_round
   dealer = initial_round(false)
-  input = get_user_input
 
   while dealer < 17 do
     puts "Dealer has #{dealer}"
     dealer = hit(dealer)
   end
-
+  
+  input = get_user_input
   while input == 'h' do
     total = hit(total)
     break if total > 20
