@@ -57,17 +57,19 @@ end
 def runner
   welcome
   total = initial_round
-  dealer = initial_round(false)
+  dealer = initial_round(false)  
+  input = get_user_input
+  
   while dealer < 17 do
     dealer += hit(dealer)
   end
 
-  input = get_user_input
   while input == 'h' do
     total = hit(total)
     break if total > 20
     display_card_total(total)
     input = get_user_input
   end
+
   end_game(total, dealer)
 end
