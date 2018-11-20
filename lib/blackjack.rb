@@ -21,7 +21,6 @@ end
 
 
 def end_game(card_total)
-
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
@@ -34,8 +33,7 @@ def initial_round
   total
 end
 
-def hit?(total)
-  input = get_user_input  
+def hit?(total, input)
   total += input == 'h' ? deal_card : 0
   if input != 'h'
     end_game(total)
@@ -53,8 +51,9 @@ end
 
 def runner
   welcome
-  total = initial_round
-  until total > 21 do
+  total = initial_round  
+  input = get_user_input
+  until input != 'h' do
     total = hit?(total)
     display_card_total(total)
   end
