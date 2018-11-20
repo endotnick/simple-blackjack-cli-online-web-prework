@@ -36,12 +36,8 @@ def initial_round
   total
 end
 
-def hit?(total, input)
-  total += input == 'h' ? deal_card : 0
-  if input != 'h'
-    end_game(total)
-  end
-  total
+def hit(total)
+  total += deal_card
 end
 
 def invalid_command
@@ -57,7 +53,7 @@ def runner
   total = initial_round
   input = get_user_input
   while input == 'h' do
-    total = hit?(total, input)
+    total = hit(total)
     break if total > 20
     display_card_total(total)
     input = get_user_input
