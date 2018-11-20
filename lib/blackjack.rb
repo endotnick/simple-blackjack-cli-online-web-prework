@@ -23,7 +23,7 @@ def end_game(card_total, dealer_total)
   if card_total > 21
     puts "You hit #{card_total}, busted!"
   elsif dealer_total > 21
-    puts "Dealer busts with #{dealer_total}, you win!"
+    puts "You hit #{card_total}, dealer busts with #{dealer_total}, you win!"
   elsif card_total > dealer_total
     puts "You hit #{card_total}, dealer hit #{dealer_total}. You won!"
   else
@@ -57,9 +57,9 @@ end
 def runner
   welcome
   total = initial_round
-  dealer = initial_round(false)  
+  dealer = initial_round(false)
   input = get_user_input
-  
+
   while dealer < 17 do
     dealer += hit(dealer)
   end
