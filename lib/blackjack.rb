@@ -61,6 +61,7 @@ def runner
   input = get_user_input
 
   while dealer < 17 do
+    puts "Dealer has #{dealer}"
     dealer += hit(dealer)
   end
 
