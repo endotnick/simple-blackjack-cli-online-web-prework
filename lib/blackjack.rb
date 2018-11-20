@@ -19,11 +19,15 @@ def get_user_input
   gets.chomp
 end
 
-def end_game(card_total)
-  if card_total > 16 && card_total < 22
-    puts "Yay! You hit #{card_total}, you won!"
+def end_game(card_total, dealer_total)
+  if card_total > 21
+    puts "You hit #{card_total}, busted!"
+  elsif dealer_total > 21
+    puts "Dealer busts with #{dealer_total}, you win!"
+  elsif card_total > dealer_total
+    puts "You hit #{card_total}, dealer hit #{dealer_total}. You won!"
   else
-    puts "Sorry, you hit #{card_total}. Thanks for playing!"
+    puts "You hit #{card_total}, dealer hit #{dealer_total}. Thanks for playing!"
   end
 end
 
@@ -33,7 +37,7 @@ def initial_round(player = true)
     total += deal_card
   end
   if player
-    display_card_total(total) 
+    display_card_total(total)
   end
   total
 end
@@ -54,6 +58,10 @@ def runner
   welcome
   total = initial_round
   dealer = initial_round(false)
+  while dealer < 17 do
+    dealer += hit(dealer)
+  end
+
   input = get_user_input
   while input == 'h' do
     total = hit(total)
@@ -61,5 +69,5 @@ def runner
     display_card_total(total)
     input = get_user_input
   end
-  end_game(total)
+  end_game(total, dealer)
 end
