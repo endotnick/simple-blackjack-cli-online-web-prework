@@ -27,12 +27,12 @@ def end_game(card_total)
   end
 end
 
-def initial_round
+def initial_round(player = true)
   total = 0
   2.times do
     total += deal_card
   end
-  display_card_total(total)
+  player ? display_card_total(total)
   total
 end
 
