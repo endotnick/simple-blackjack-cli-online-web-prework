@@ -51,10 +51,10 @@ end
 
 def runner
   welcome
-  total = initial_round  
+  total = initial_round
   input = get_user_input
   until input != 'h' do
-    total = hit?(total)
+    total = hit?(total, input)
     display_card_total(total)
   end
   end_game(total)
