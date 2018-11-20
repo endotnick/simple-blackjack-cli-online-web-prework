@@ -32,7 +32,7 @@ def initial_round(player = true)
   2.times do
     total += deal_card
   end
-  player ? display_card_total(total)
+  player ? display_card_total(total) :
   total
 end
 
