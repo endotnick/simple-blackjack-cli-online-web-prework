@@ -18,8 +18,10 @@ def get_user_input
   gets.chomp
 end
 
+
 def end_game(card_total)
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
+
 end
 
 def initial_round
@@ -28,7 +30,10 @@ def initial_round
     total += deal_card
   end
   display_card_total(total)
+<<<<<<< HEAD
   total
+=======
+>>>>>>> 287a0b3ccc670009f5ab588c94dac34ddbb4b093
 end
 
 def hit?(total)
@@ -49,6 +54,7 @@ end
 #####################################################
 
 def runner
+<<<<<<< HEAD
   welcome
   total = initial_round
   until total > 21 do
@@ -56,4 +62,16 @@ def runner
     display_card_total(total)
   end
   end_game(total)
+=======
+  # code runner here
+=begin
+    until input == 's' do
+      if input == 'h'
+        total += deal_card
+        end_game if total > 21
+      end
+      prompt_user
+      input = get_user_input
+=end
+>>>>>>> 287a0b3ccc670009f5ab588c94dac34ddbb4b093
 end
